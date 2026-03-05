@@ -30,17 +30,27 @@ text-align:center;
 }
 
 
-h1{
-font-size:120px;
-letter-spacing:6px;
-margin-bottom:10px;
-color:#ffffff;
+h1 {
+    font-size:120px;
+    letter-spacing:6px;
+    margin-bottom:10px;
 
-text-shadow:
-0 0 5px #ffb347,
-0 0 15px #ff7a00,
-0 0 35px #ff3c00,
-0 0 70px #ff0000;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #ffd27a 25%,
+        #ff9a00 50%,
+        #ff5a00 75%,
+        #b30000 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 10px rgba(255,120,0,0.6),
+        0 0 25px rgba(255,60,0,0.6),
+        0 0 50px rgba(255,0,0,0.4);
 }
 
 .slogan{
