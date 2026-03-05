@@ -119,24 +119,38 @@ overflow:hidden;
 .sparks span{
 position:absolute;
 bottom:-10px;
-width:6px;
-height:6px;
+
+width:var(--size);
+height:var(--size);
+
 background:#ff6a00;
 border-radius:50%;
+
 box-shadow:0 0 10px #ff6a00;
-animation:sparkRise linear infinite;
+
+animation:sparkRise var(--duration) linear infinite;
+
+opacity:0.8;
 }
 
 @keyframes sparkRise{
+
 0%{
-transform:translateY(0) scale(1);
+transform:translateY(0) translateX(0) scale(1);
 opacity:1;
 }
+
+50%{
+transform:translateY(-50vh) translateX(var(--drift));
+opacity:0.8;
+}
+
 100%{
-transform:translateY(-100vh) scale(0.5);
+transform:translateY(-100vh) translateX(calc(var(--drift) * -1)) scale(0.5);
 opacity:0;
 }
-}    
+
+}
 body{
 animation: lavaPulse 6s infinite ease-in-out;
 }
@@ -167,20 +181,24 @@ Klid v pohybu
 
 </div>
 <script>
-
 const sparks = document.querySelector(".sparks");
 
-for(let i=0;i<60;i++){
+for(let i=0;i<50;i++){
 
 let spark = document.createElement("span");
 
 spark.style.left = Math.random()*100 + "vw";
-spark.style.animationDuration = (3 + Math.random()*4) + "s";
-spark.style.opacity = Math.random();
+
+spark.style.setProperty("--size", (3 + Math.random()*5) + "px");
+spark.style.setProperty("--duration", (3 + Math.random()*5) + "s");
+spark.style.setProperty("--drift", (Math.random()*80 - 40) + "px");
+
+spark.style.opacity = 0.4 + Math.random()*0.6;
 
 sparks.appendChild(spark);
 
 }
+
 
 </script>
 </body>
