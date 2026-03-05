@@ -82,7 +82,15 @@ box-shadow:
 
 transform: scale(1.05);
 }
+@keyframes lavaPulse{
+0%{filter:brightness(1);}
+50%{filter:brightness(1.15);}
+100%{filter:brightness(1);}
+}
 
+body{
+animation: lavaPulse 6s infinite ease-in-out;
+}
 </style>
 </head>
 
