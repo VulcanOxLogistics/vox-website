@@ -166,6 +166,27 @@ animation: lavaPulse 6s infinite ease-in-out;
 
 .lava-flash{
 animation: lavaFlash 0.6s ease-out;
+}
+.flash-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background: radial-gradient(circle at center,
+rgba(255,120,0,0.35) 0%,
+rgba(255,60,0,0.15) 40%,
+rgba(0,0,0,0) 70%);
+
+pointer-events:none;
+opacity:0;
+z-index:2;
+transition:opacity 0.2s ease;
+}
+
+.flash-overlay.active{
+opacity:1;
 }    
 </style>
 </head>
@@ -173,7 +194,7 @@ animation: lavaFlash 0.6s ease-out;
 <body>
 
 <div class="sparks"></div>
-
+<div class="flash-overlay"></div>
 <div class="container">
 
 <h1>VULCAN OX LOGISTICS</h1>
@@ -211,18 +232,20 @@ spark.style.opacity = 0.4 + Math.random()*0.6;
 sparks.appendChild(spark);
 
 }
+const flash = document.querySelector(".flash-overlay");
+
 function lavaCrack(){
 
-document.body.classList.add("lava-flash");
+flash.classList.add("active");
 
 setTimeout(()=>{
-document.body.classList.remove("lava-flash");
-},600);
+flash.classList.remove("active");
+},200);
 
 }
 
 setInterval(()=>{
-if(Math.random() < 0.25){
+if(Math.random() < 0.18){
 lavaCrack();
 }
 },4000);
