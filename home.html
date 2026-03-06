@@ -193,7 +193,23 @@ right:15px;
 </head>
 
 <body>
+<div id="vox-content" class="vox-content">
 
+<h2>KDO JSME</h2>
+
+<p>
+Vulcan Ox Logistics je virtuální trucking společnost
+zaměřená na klidnou jízdu, přátelskou komunitu
+a dlouhodobou stabilitu.
+</p>
+
+<p>
+Naším cílem není být největší,
+ale vytvořit prostředí,
+kam se lidé rádi vracejí.
+</p>
+
+</div>
 <div class="navbar">
 
 <div class="logo">
@@ -214,7 +230,9 @@ VULCAN OX LOGISTICS
 
 <div class="vox-panel">
 
-<button class="vox-button">KDO JSME</button>
+<button class="vox-button" onclick="openVox()">
+KDO JSME
+</button>
 
 </div>
 
@@ -226,6 +244,12 @@ VULCAN OX LOGISTICS
 <p>Oficiální web Vulcan Ox Logistics</p>
 
 </div>
+<script>
 
+function openVox(){
+document.getElementById("vox-content").style.display = "block";
+}
+
+</script>
 </body>
 </html>
