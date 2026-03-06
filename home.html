@@ -148,6 +148,37 @@ inset 0 -3px 8px rgba(0,0,0,0.9);
 border-radius:4px;
 
 }
+  .vox-panel::before,
+.vox-panel::after{
+
+content:"";
+
+position:absolute;
+
+width:12px;
+height:12px;
+
+background: radial-gradient(circle at 30% 30%, #666, #111);
+
+border-radius:50%;
+
+box-shadow:
+0 0 2px #000,
+inset 0 2px 3px rgba(255,255,255,0.2);
+
+}
+  .vox-panel::before{
+
+top:6px;
+left:6px;
+
+}
+  .vox-panel::after{
+
+top:6px;
+right:6px;
+
+}
 </style>
 
 </head>
