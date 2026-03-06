@@ -131,7 +131,15 @@ inset 0 0 10px rgba(255,120,0,0.6);
 transform:translateY(-2px);
 
 }
+.vox-button:hover ~ .vox-panel::before,
+.vox-button:hover ~ .vox-panel::after{
 
+box-shadow:
+0 1px 2px rgba(0,0,0,0.9),
+inset 0 -3px 5px rgba(255,140,0,0.65),
+inset 0 2px 3px rgba(0,0,0,0.9);
+
+}
   .vox-panel{
 
 background: linear-gradient(180deg,#1c1c1c,#050505);
@@ -166,7 +174,7 @@ box-shadow:
 0 1px 2px rgba(0,0,0,0.9),
 inset 0 -2px 3px rgba(255,120,0,0.35),
 inset 0 2px 3px rgba(0,0,0,0.9);
-
+transition: box-shadow 0.25s ease;
 }
   .vox-panel::before{
 
