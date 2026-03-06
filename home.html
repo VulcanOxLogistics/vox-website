@@ -357,14 +357,30 @@ KDO JSME
 
 function openVox(){
 
-document.getElementById("vox-content").style.display = "block";
-document.getElementById("vox-overlay").style.display = "block";
+let panel = document.getElementById("vox-content");
+let overlay = document.getElementById("vox-overlay");
+
+overlay.style.display = "block";
+panel.style.display = "block";
+
+setTimeout(function(){
+panel.style.opacity = "1";
+panel.style.transform = "translate(-50%, -50%) scale(1)";
+},10);
 
 }
 function closeVox(){
 
-document.getElementById("vox-content").style.display = "none";
-document.getElementById("vox-overlay").style.display = "none";
+let panel = document.getElementById("vox-content");
+let overlay = document.getElementById("vox-overlay");
+
+panel.style.opacity = "0";
+panel.style.transform = "translate(-50%, -50%) scale(0.9)";
+
+setTimeout(function(){
+panel.style.display = "none";
+overlay.style.display = "none";
+},300);
 
 }
 </script>
