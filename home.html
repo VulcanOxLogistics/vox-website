@@ -68,6 +68,57 @@ margin-top:120px;
 text-align:center;
 }
 
+/* pravý panel */
+.vox-menu {
+position: fixed;
+right: 0;
+top: 120px;
+width: 260px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding-right: 20px;
+}
+
+/* VOX tlačítko */
+.vox-button {
+
+background: linear-gradient(145deg,#1a1a1a,#050505);
+border: 2px solid #ff5a00;
+
+color: #ff7b2f;
+font-weight: bold;
+font-size: 18px;
+
+padding: 16px 20px;
+
+text-align: center;
+cursor: pointer;
+
+letter-spacing: 1px;
+
+box-shadow:
+0 0 10px rgba(255,90,0,0.4),
+inset 0 0 10px rgba(255,90,0,0.25);
+
+transition: all 0.25s ease;
+
+}
+
+/* hover efekt */
+.vox-button:hover {
+
+background: linear-gradient(145deg,#2a0d00,#120500);
+
+color: #ffffff;
+
+box-shadow:
+0 0 18px rgba(255,100,0,0.9),
+inset 0 0 14px rgba(255,100,0,0.5);
+
+transform: translateX(-5px);
+
+}  
 </style>
 
 </head>
@@ -90,7 +141,14 @@ VULCAN OX LOGISTICS
 </div>
 
 </div>
+<div class="vox-menu">
 
+<div class="vox-button">
+KDO JSME
+</div>
+
+</div>
+  
 <div class="content">
 
 <h1>Vítejte ve VOX</h1>
