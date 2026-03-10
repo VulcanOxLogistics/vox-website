@@ -535,9 +535,8 @@ Blazull
 
 <p><strong>Role:</strong> Vulcan (Founder)</p>
 
-<p><strong>Měsíční km:</strong> 0</p>
-
-<p><strong>Celkové km:</strong> 0</p>
+<p><strong>Měsíční km:</strong> <span id="blazull-month">načítám...</span></p>
+<p><strong>Celkové km:</strong> <span id="blazull-total">načítám...</span></p>
 <div class="driver-badges">
 
 <div class="badge-wrap">
@@ -719,5 +718,37 @@ overlay.style.display = "none";
 
 }
 </script>
+<script>
+
+const companyId = 38435;
+
+async function loadKm() {
+
+try {
+
+let response = await fetch("https://api.truckyapp.com/v2/company/"+companyId+"/drivers");
+
+let data = await response.json();
+
+let driver = data.find(d => d.name.toLowerCase() === "blazull");
+
+if(driver){
+
+document.getElementById("blazull-month").innerText = driver.monthly_km;
+document.getElementById("blazull-total").innerText = driver.total_km;
+
+}
+
+} catch(e){
+
+console.log("Trucky API chyba");
+
+}
+
+}
+
+loadKm();
+
+</script>  
 </body>
 </html>
