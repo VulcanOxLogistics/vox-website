@@ -727,7 +727,7 @@ async function loadKm() {
 try {
 
 let response = await fetch(
-"https://api.truckyapp.com/v2/vtc/"+companyId+"/drivers",
+"https://hub.truckyapp.com/api/v1/vtc/"+companyId,
 {
 headers:{
 "Authorization":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJjb21wYW55X2lkIjozODQzNX0.ps3YjMgz5Hz9yY869jxJUOP7lfiK71P_4StAVqw8dpY"
@@ -737,12 +737,12 @@ headers:{
 
 let data = await response.json();
 
-let driver = data.find(d => d.name.toLowerCase() === "blazull");
+let driver = data.members.find(d => d.username.toLowerCase() === "blazull");
 
 if(driver){
 
-document.getElementById("blazull-month").innerText = driver.monthly_km;
-document.getElementById("blazull-total").innerText = driver.total_km;
+document.getElementById("blazull-month").innerText = driver.monthlyDistance;
+document.getElementById("blazull-total").innerText = driver.totalDistance;
 
 }
 
