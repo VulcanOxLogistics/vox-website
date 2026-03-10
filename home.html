@@ -370,6 +370,48 @@ filter: drop-shadow(0 0 18px rgba(255,120,0,0.9));
 
 transform:scale(1.2);
 
+}
+.badge-wrap{
+position:relative;
+display:inline-block;
+}
+
+.badge-preview{
+
+position:absolute;
+
+bottom:80px;
+left:50%;
+
+transform:translateX(-50%) scale(0.8);
+
+opacity:0;
+
+pointer-events:none;
+
+transition:0.25s;
+
+}
+
+.badge-preview img{
+
+width:160px;
+
+border:2px solid #ff6600;
+
+box-shadow:
+0 0 20px rgba(255,120,0,0.6);
+
+border-radius:6px;
+
+}
+
+.badge-wrap:hover .badge-preview{
+
+opacity:1;
+
+transform:translateX(-50%) scale(1);
+
 }  
 </style>
 
@@ -476,8 +518,19 @@ Blazull
 <p><strong>Celkové km:</strong> 0</p>
 <div class="driver-badges">
 
-<img src="Aurora odznak.png" class="badge">
-<img src="Odznak-NIGHTFALL.png" class="badge">
+<div class="badge-wrap">
+<img src="badge-aurora.png" class="badge">
+<span class="badge-preview">
+<img src="badge-aurora.png">
+</span>
+</div>
+
+<div class="badge-wrap">
+<img src="badge-nightfall.png" class="badge">
+<span class="badge-preview">
+<img src="badge-nightfall.png">
+</span>
+</div>
 
 </div>
 </div>
