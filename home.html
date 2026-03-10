@@ -400,11 +400,28 @@ stabilitu, která obstojí v jakýchkoli podmínkách.
 Seznam řidičů firmy Vulcan Ox Logistics.
 </p>
 
-<p style="margin-top:20px;font-size:20px;color:#ff7a2a;">
+<p style="margin-top:20px;font-size:20px;color:#ff7a2a;cursor:pointer;" onclick="openDriver()">
 Blazull
 </p>
 
-</div>  
+</div>
+
+<div id="vox-driver" class="vox-content">
+
+<div class="vox-close" onclick="closeDriver()">✕</div>
+
+<h2>BLAZULL</h2>
+
+<img src="bullweb.png" style="width:100%;margin-bottom:20px;border:1px solid #ff6600;">
+
+<p><strong>Role:</strong> Founder</p>
+
+<p><strong>Měsíční km:</strong> 0</p>
+
+<p><strong>Celkové km:</strong> 0</p>
+
+</div>
+
 <div class="navbar">
 
 <div class="logo">
@@ -532,7 +549,36 @@ panel.style.display = "none";
 overlay.style.display = "none";
 },300);
 
-}  
+}
+  function openDriver(){
+
+let panel = document.getElementById("vox-driver");
+let overlay = document.getElementById("vox-overlay");
+
+overlay.style.display = "block";
+panel.style.display = "block";
+
+setTimeout(function(){
+panel.style.opacity = "1";
+panel.style.transform = "translate(-50%, -50%) scale(1)";
+},10);
+
+}
+
+function closeDriver(){
+
+let panel = document.getElementById("vox-driver");
+let overlay = document.getElementById("vox-overlay");
+
+panel.style.opacity = "0";
+panel.style.transform = "translate(-50%, -50%) scale(0.9)";
+
+setTimeout(function(){
+panel.style.display = "none";
+overlay.style.display = "none";
+},300);
+
+}
 </script>
 </body>
 </html>
