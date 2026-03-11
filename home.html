@@ -560,15 +560,15 @@ Blazull
 </div>
 </div>
 </div>
-<p style="margin-top:20px;font-size:20px;color:#ff7a2a;cursor:pointer;" onclick="openDriver()">
+<p style="margin-top:20px;font-size:20px;color:#ff7a2a;cursor:pointer;" onclick="openDriverPetulman()">
 Petulman
 </p>
 
 </div>
 
-<div id="vox-driver" class="vox-content">
+<div id="vox-driver-petulman" class="vox-content">
 
-<div class="vox-close" onclick="closeDriver()">✕</div>
+<div class="vox-close" onclick="closeDriverPetulman()">✕</div>
 
 <h2>PETULMAN</h2>
 
@@ -576,7 +576,7 @@ Petulman
 
 <div class="driver-info">
 
-<p><strong>Role:</strong> Vulcan (Founder)</p>
+<p><strong>Role:</strong> Ox Prime</p>
 
 <p><strong>Měsíční km:</strong> <span id="petulman-month">načítám...</span></p>
 <p><strong>Celkové km:</strong> <span id="petulman-total">načítám...</span></p>
@@ -772,7 +772,10 @@ if(data.Blazull){
 document.getElementById("blazull-month").innerText = data.Blazull.month;
 document.getElementById("blazull-total").innerText = data.Blazull.total;
 }
-
+if(data.Petulman){
+document.getElementById("petulman-month").innerText = data.Petulman.month;
+document.getElementById("petulman-total").innerText = data.Petulman.total;
+}
 })
 .catch(error => console.log("VOX data error:", error));
 
