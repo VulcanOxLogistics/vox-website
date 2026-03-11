@@ -720,17 +720,21 @@ overlay.style.display = "none";
 </script>
 <script>
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+
 fetch("vox-km.json")
 .then(response => response.json())
 .then(data => {
 
-  if(data.Blazull){
-    document.getElementById("blazull-month").innerText = data.Blazull.month;
-    document.getElementById("blazull-total").innerText = data.Blazull.total;
-  }
+if(data.Blazull){
+document.getElementById("blazull-month").innerText = data.Blazull.month;
+document.getElementById("blazull-total").innerText = data.Blazull.total;
+}
 
 })
 .catch(error => console.log("VOX data error:", error));
+
+});
 </script>
 
 
