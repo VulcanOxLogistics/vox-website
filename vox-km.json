@@ -1,12 +1,10 @@
 {
-  "Blazull": {
-    "month": 12264,
-    "total": 299779
-  }
-}
-{
-  "Petulman": {
-    "month": 4625,
-    "total": 152559
-  }
+ "Blazull": {
+  "month": 12264,
+  "total": 299779
+ },
+ "Petulman": {
+  "month": 4625,
+  "total": 12559
+ }
 }
