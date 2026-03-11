@@ -736,7 +736,7 @@ headers:{
 );
 
 let data = await response.json();
-
+console.log(data);
 let driver = data.members.find(d => d.username.toLowerCase() === "blazull");
 
 if(driver){
