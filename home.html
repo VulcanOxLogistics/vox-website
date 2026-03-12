@@ -530,7 +530,7 @@ Seznam řidičů firmy Vulcan Ox Logistics.
 
 <div class="driver-info">
 
-<p><strong>Role:</strong> Vulcan (Founder)</p>
+<p><strong>Role:</strong> <span id="driver-role">Vulcan (Founder)</span></p>
 
 <p><strong>Měsíční km:</strong> <span id="blazull-month">načítám...</span></p>
 <p><strong>Celkové km:</strong> <span id="blazull-total">načítám...</span></p>
@@ -731,6 +731,7 @@ overlay.style.display = "none";
 let panel = document.getElementById("vox-driver");
 let overlay = document.getElementById("vox-overlay");
 document.getElementById("driver-name").innerText = window.currentDriver.name;
+document.getElementById("driver-role").innerText = window.currentDriver.role;    
 overlay.style.display = "block";
 panel.style.display = "block";
 
