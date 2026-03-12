@@ -749,18 +749,12 @@ fetch("drivers.json")
 const fleet = document.getElementById("fleet-list");
 
 drivers.forEach(driver => {
-
 let item = document.createElement("p");
-
 item.style.marginTop = "20px";
 item.style.fontSize = "20px";
 item.style.color = "#ff7a2a";
 item.style.cursor = "pointer";
-
 item.innerText = driver.name;
-
-item.onclick = function(){
-window.currentDriver = driver;
 item.onclick = function(){
 window.currentDriver = driver;
 openDriver();
