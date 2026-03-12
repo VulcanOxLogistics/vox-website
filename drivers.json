@@ -28,7 +28,7 @@
 "role": "VOX Driver",
 "truck": "",
 "avatar": "",
-"badges": []
+"badges": ["Aurora odznak.png"]
 },
   
 {
@@ -85,5 +85,29 @@
 "truck": "",
 "avatar": "",
 "badges": []
-}  
+},
+  
+{
+"name": "DJspider11",
+"role": "VOX Driver",
+"truck": "",
+"avatar": "",
+"badges": []
+},
+  
+{
+"name": "michalpodzem",
+"role": "VOX Driver",
+"truck": "",
+"avatar": "",
+"badges": []
+},
+  
+{
+"name": "guldackcze",
+"role": "VOX Driver",
+"truck": "",
+"avatar": "",
+"badges": ["Aurora odznak.png"]
+},   
 ]
