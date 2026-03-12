@@ -808,6 +808,14 @@ document.getElementById("petulman-total").innerText = data.Petulman.total;
 .catch(error => console.log("VOX data error:", error));
 
 });
+fetch("drivers.json")
+.then(response => response.json())
+.then(drivers => {
+
+console.log("VOX drivers:", drivers);
+
+})
+.catch(error => console.log("Drivers JSON error:", error));  
 </script>
 
 
