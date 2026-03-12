@@ -428,6 +428,25 @@ border-bottom:1px solid #ff7a26;
 padding-bottom:4px;
 display:inline-block;
 }
+.driver-info{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+}
+
+.driver-left{
+flex:1;
+}
+
+.driver-avatar{
+width:120px;
+height:120px;
+border-radius:50%;
+border:2px solid #ff6600;
+box-shadow:0 0 18px rgba(255,120,0,0.8);
+object-fit:cover;
+margin-left:20px;
+}
 </style>
 
 </head>
@@ -523,12 +542,20 @@ Seznam řidičů firmy Vulcan Ox Logistics.
 
 <div class="driver-info">
 
+<div class="driver-left">
+
 <p><strong>Role:</strong> <span id="driver-role">Vulcan (Founder)</span></p>
 
-
 <p><strong>Celkové km:</strong> <span id="driver-total">načítám...</span></p>
-<h3 class="badge-title">Odznaky za projeté akce</h3> 
+
+<h3 class="badge-title">Odznaky za projeté akce</h3>
+
 <div class="driver-badges" id="driver-badges"></div>
+
+</div>
+
+<img id="driver-avatar" class="driver-avatar">
+
 </div>
 </div>
 
@@ -674,6 +701,11 @@ if(window.currentDriver.truck){
 document.getElementById("driver-truck").src = "./" + window.currentDriver.truck;
 }else{
 document.getElementById("driver-truck").src = "./Bull.png";
+}
+if(window.currentDriver.avatar){
+document.getElementById("driver-avatar").src = "./" + window.currentDriver.avatar;
+}else{
+document.getElementById("driver-avatar").style.display = "none";
 }    
 fetch("vox-km.json")
 .then(response => response.json())
