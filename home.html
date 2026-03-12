@@ -694,12 +694,25 @@ if(window.currentDriver.badges){
 
 window.currentDriver.badges.forEach(badge => {
 
+let wrap = document.createElement("div");
+wrap.className = "badge-wrap";
+
 let img = document.createElement("img");
 img.className = "badge";
-
 img.src = "./" + badge;
 
-badgesContainer.appendChild(img);
+let preview = document.createElement("div");
+preview.className = "badge-preview";
+
+let previewImg = document.createElement("img");
+previewImg.src = "./" + badge;
+
+preview.appendChild(previewImg);
+
+wrap.appendChild(img);
+wrap.appendChild(preview);
+
+badgesContainer.appendChild(wrap);
 
 });
 
