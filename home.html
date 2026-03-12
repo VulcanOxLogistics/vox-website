@@ -821,7 +821,7 @@ item.style.cursor = "pointer";
 item.innerText = driver.name;
 
 item.onclick = function(){
-
+window.currentDriver = driver;
 if(driver.name === "Blazull"){
 openDriver();
 }
