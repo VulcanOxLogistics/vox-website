@@ -639,7 +639,7 @@ document.getElementById("driver-avatar").src = "./" + window.currentDriver.avata
 }else{
 document.getElementById("driver-avatar").style.display = "none";
 }    
-fetch("vox-km.json")
+fetch("vox-km.json?v=" + Date.now())
 .then(response => response.json())
 .then(data => {
 
