@@ -30,18 +30,14 @@ background-attachment:fixed;
 position:fixed;
 top:0;
 left:0;
-
 width:100%;
 height:70px;
-
 background:linear-gradient(#111,#0b0b0b);
 border-bottom:2px solid #ff6600;
 box-shadow:0 0 20px rgba(255,100,0,0.4);
-
 display:flex;
 align-items:center;
 justify-content:space-between;
-
 padding:0 40px;
 box-sizing:border-box;
 }
@@ -90,65 +86,42 @@ margin-top:8px;
 /* pravý panel */
 .vox-menu {
 position: fixed;
-
 right: 70px;
-
 top: 200px;
-
 width:200px;
-
 display:flex;
-
 flex-direction:column;
-
 align-items:center;
-
 gap:25px;
 }
 
 .vox-button{
 margin-top:12px;
 width:140px;
-
 background: linear-gradient(180deg,#1c1c1c,#050505);
-
 border:1px solid #ff5a00;
-
 color:#ff7a2a;
-
 font-size:13px;
 font-weight:bold;
-
 padding:8px 14px;
-
 text-align:center;
-
 cursor:pointer;
-
 letter-spacing:2px;
-
 border-radius:3px;
-
 box-shadow:
 0 0 6px rgba(255,90,0,0.6),
 inset 0 2px 4px rgba(255,255,255,0.15),
 inset 0 -3px 6px rgba(0,0,0,0.9);
-
 transition: all 0.2s ease;
-
 }
 
 /* hover */
 .vox-button:hover{
-
 color:#ffffff;
-
 box-shadow:
 0 0 12px rgba(255,120,0,0.9),
 inset 0 0 10px rgba(255,120,0,0.6);
-
 transform:translateY(-2px);
-
 }
 .vox-button:hover ~ .vox-panel::before,
 .vox-button:hover ~ .vox-panel::after{
@@ -162,33 +135,24 @@ inset 0 2px 3px rgba(0,0,0,0.9);
   .vox-panel{
 text-align:center;
 background: linear-gradient(180deg,#1c1c1c,#050505);
-
 border:2px solid #2b2b2b;
-
 padding:20px 15px;
-
 box-shadow:
 0 0 10px rgba(0,0,0,0.8),
 inset 0 2px 6px rgba(255,255,255,0.05),
 inset 0 -3px 8px rgba(0,0,0,0.9);
-
 border-radius:4px;
 
 }
   .vox-panel::before,
 .vox-panel::after{
-
 content:"";
-
 position:absolute;
-
 width:12px;
 height:12px;
-
 background: radial-gradient(circle at 30% 30%, #666, #111);
 border-radius:50%;
-border:1px solid #000;
-  
+border:1px solid #000; 
 box-shadow:
 0 1px 2px rgba(0,0,0,0.9),
 inset 0 -2px 3px rgba(255,120,0,0.35),
@@ -196,52 +160,35 @@ inset 0 2px 3px rgba(0,0,0,0.9);
 transition: box-shadow 0.25s ease;
 }
   .vox-panel::before{
-
 top:4px;
 left:15px;
-
 }
   .vox-panel::after{
-
 top:4px;
 right:15px;
-
 }
 .vox-content{
-
 position:fixed;
-
 top:50%;
 left:50%;
-
 transform:translate(-50%, -50%) scale(0.9);
-
 width:820px;
-
 max-height:85vh;
-
 font-size:22px;  
-
 background:rgba(10,10,10,0.92);
-
 border:2px solid #ff6600;
-
 box-shadow:
 0 0 25px rgba(255,120,0,0.35),
 inset 0 0 20px rgba(0,0,0,0.8);
 animation:voxGlow 3s infinite alternate;
-padding:40px;
-  
-line-height:1.9;
-  
+padding:40px;  
+line-height:1.9; 
 overflow-y:auto;
-
 display:none;
 opacity:0;
 transform:translate(-50%, -50%) scale(0.9);
 transition:all 0.3s ease;
 z-index:999;
-
 }
 @keyframes voxGlow{
 0%{
@@ -259,32 +206,20 @@ inset 0 0 20px rgba(0,0,0,0.8);
 
 }  
   .vox-overlay{
-
 position:fixed;
-
 top:0;
 left:0;
-
 width:100%;
 height:100%;
-
 background:rgba(0,0,0,0.75);
-
 display:none;
-
 z-index:998;
-
 }
   .vox-content h2{
-
 color:#ff6600;
-
 margin-bottom:20px;
-
 letter-spacing:2px;
-
 font-size:32px;    
-
 }
 .vox-close{
 position:absolute;
@@ -323,33 +258,22 @@ transform:scale(1.04);
 .driver-info{
 margin-top:20px;
 padding:15px;
-
 border:1px solid rgba(255,100,0,0.4);
-
 background:rgba(20,20,20,0.6);
-
 box-shadow:
 inset 0 0 10px rgba(0,0,0,0.7),
 0 0 10px rgba(255,80,0,0.15);
-
 border-radius:6px;
 }
 .driver-truck{
-
 margin-top:20px;
-
 padding:15px;
-
 border:1px solid rgba(255,120,0,0.4);
-
 background:rgba(20,20,20,0.6);
-
 box-shadow:
 inset 0 0 10px rgba(0,0,0,0.7),
 0 0 10px rgba(255,80,0,0.15);
-
 border-radius:6px;
-
 }
 
 .truck-image{
@@ -361,13 +285,9 @@ margin-top:10px;
 box-shadow:0 0 20px rgba(255,120,0,0.35);
 }
 .driver-badges{
-
 margin-top:20px;
-
 display:flex;
-
 gap:15px;
-
 }
 
 .badge{
@@ -401,22 +321,15 @@ transition:0.25s;
 }
 
 .badge-preview img{
-
 width:160px;
-
 border:2px solid #ff6600;
-
 box-shadow:
 0 0 20px rgba(255,120,0,0.6);
-
 border-radius:6px;
-
 }
 
 .badge-wrap:hover .badge-preview{
-
 opacity:1;
-
 transform:translateX(-50%) scale(1);
 }
 .badge-title{
@@ -450,7 +363,7 @@ margin-left:25px;
 display:grid;
 grid-template-rows: repeat(6, auto);
 grid-auto-flow: column;
-gap:10px 60px;
+gap:8px 30px;
 margin-top:25px;
 }
 #fleet-list p{
