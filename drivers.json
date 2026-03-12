@@ -22,7 +22,7 @@
 "avatar": "",
 "badges": ["Aurora odznak.png","Odznak-NIGHTFALL.png"]
 },
-
+  
 {
 "name": "Bastmen",
 "role": "VOX Driver",
@@ -30,6 +30,7 @@
 "avatar": "",
 "badges": []
 },
+  
 {
 "name": "Daemancze",
 "role": "VOX Driver",
@@ -37,13 +38,15 @@
 "avatar": "",
 "badges": []
 },
+  
 {
 "name": "MartinCZ/SK",
 "role": "New Ox",
 "truck": "",
 "avatar": "",
 "badges": []
-}
+},
+  
 {
 "name": "Milhousek",
 "role": "Ox Prime",
@@ -51,6 +54,7 @@
 "avatar": "",
 "badges": []
 },
+  
 {
 "name": "Chezak84 CZ",
 "role": "New Ox",
