@@ -697,13 +697,7 @@ window.currentDriver.badges.forEach(badge => {
 let img = document.createElement("img");
 img.className = "badge";
 
-if(badge === "aurora"){
-img.src = "Aurora odznak.png";
-}
-
-if(badge === "nightfall"){
-img.src = "Odznak-NIGHTFALL.png";
-}
+img.src = badge;
 
 badgesContainer.appendChild(img);
 
