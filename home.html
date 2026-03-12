@@ -687,7 +687,29 @@ if(data[driverName]){
 document.getElementById("driver-month").innerText = data[driverName].month;
 document.getElementById("driver-total").innerText = data[driverName].total;
 }
+let badgesContainer = document.getElementById("driver-badges");
+badgesContainer.innerHTML = "";
 
+if(window.currentDriver.badges){
+
+window.currentDriver.badges.forEach(badge => {
+
+let img = document.createElement("img");
+img.className = "badge";
+
+if(badge === "aurora"){
+img.src = "Aurora odznak.png";
+}
+
+if(badge === "nightfall"){
+img.src = "Odznak-NIGHTFALL.png";
+}
+
+badgesContainer.appendChild(img);
+
+});
+
+}
 });    
 overlay.style.display = "block";
 panel.style.display = "block";
