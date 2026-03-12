@@ -807,7 +807,22 @@ fetch("drivers.json")
 .then(response => response.json())
 .then(drivers => {
 
-console.log("VOX drivers:", drivers);
+const fleet = document.getElementById("fleet-list");
+
+drivers.forEach(driver => {
+
+let item = document.createElement("p");
+
+item.style.marginTop = "20px";
+item.style.fontSize = "20px";
+item.style.color = "#ff7a2a";
+item.style.cursor = "pointer";
+
+item.innerText = driver.name;
+
+fleet.appendChild(item);
+
+});
 
 })
 .catch(error => console.log("Drivers JSON error:", error));  
