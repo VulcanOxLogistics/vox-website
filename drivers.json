@@ -109,5 +109,29 @@
 "truck": "",
 "avatar": "",
 "badges": ["Aurora odznak.png"]
-}   
+},
+  
+{
+"name": "Rumaxik",
+"role": "New Ox",
+"truck": "",
+"avatar": "",
+"badges": []
+},
+  
+{
+"name": "Dresey",
+"role": "New Ox",
+"truck": "",
+"avatar": "",
+"badges": ["Aurora odznak.png"]
+},
+  
+{
+"name": "Manonka",
+"role": "Ox Prime",
+"truck": "",
+"avatar": "",
+"badges": []
+}     
 ]
