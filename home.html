@@ -561,43 +561,7 @@ Seznam řidičů firmy Vulcan Ox Logistics.
 
 </div>
 
-<div id="vox-driver-petulman" class="vox-content">
-
-<div class="vox-close" onclick="closeDriverPetulman()">✕</div>
-
-<h2>PETULMAN</h2>
-
-<img src="Scania-S.png" style="width:100%;margin-bottom:20px;border:1px solid #ff6600;">
-
-<div class="driver-info">
-
-<p><strong>Role:</strong> Ox Prime</p>
-
-<p><strong>Měsíční km:</strong> <span id="petulman-month">načítám...</span></p>
-<p><strong>Celkové km:</strong> <span id="petulman-total">načítám...</span></p>
-<div class="driver-badges">
-
-<div class="badge-wrap">
-<img src="Aurora odznak.png" class="badge">
-
-<div class="badge-preview">
-<img src="Aurora odznak.png">
-</div>
-
-</div>
-
-<div class="badge-wrap">
-<img src="Odznak-NIGHTFALL.png" class="badge">
-
-<div class="badge-preview">
-<img src="Odznak-NIGHTFALL.png">
-</div>
-
-</div>
-
-</div>
-</div>
-</div>  
+ 
 <div class="navbar">
 
 <div class="logo">
@@ -767,35 +731,7 @@ panel.style.display = "none";
 overlay.style.display = "none";
 },300);
 }
- function openDriverPetulman(){
 
-let panel = document.getElementById("vox-driver-petulman");
-let overlay = document.getElementById("vox-overlay");
-
-overlay.style.display = "block";
-panel.style.display = "block";
-
-setTimeout(function(){
-panel.style.opacity = "1";
-panel.style.transform = "translate(-50%, -50%) scale(1)";
-},10);
-
-}
-
-function closeDriverPetulman(){
-
-let panel = document.getElementById("vox-driver-petulman");
-let overlay = document.getElementById("vox-overlay");
-
-panel.style.opacity = "0";
-panel.style.transform = "translate(-50%, -50%) scale(0.9)";
-
-setTimeout(function(){
-panel.style.display = "none";
-overlay.style.display = "none";
-},300);
-
-} 
 </script>
 <script>
 
@@ -823,7 +759,7 @@ openDriver();
 }
 
 if(driver.name === "Petulman"){
-openDriverPetulman();
+openDriver();
 }
 if(driver.name === "Stalky86cz"){
 openDriver();
