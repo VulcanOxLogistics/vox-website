@@ -731,7 +731,19 @@ overlay.style.display = "none";
 let panel = document.getElementById("vox-driver");
 let overlay = document.getElementById("vox-overlay");
 document.getElementById("driver-name").innerText = window.currentDriver.name;
-document.getElementById("driver-role").innerText = window.currentDriver.role;    
+document.getElementById("driver-role").innerText = window.currentDriver.role;
+fetch("vox-km.json")
+.then(response => response.json())
+.then(data => {
+
+let driverName = window.currentDriver.name;
+
+if(data[driverName]){
+document.getElementById("blazull-month").innerText = data[driverName].month;
+document.getElementById("blazull-total").innerText = data[driverName].total;
+}
+
+});    
 overlay.style.display = "block";
 panel.style.display = "block";
 
@@ -786,22 +798,7 @@ overlay.style.display = "none";
 } 
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
 
-fetch("vox-km.json")
-.then(response => response.json())
-.then(data => {
-
-let driverName = window.currentDriver.name;
-
-if(data[driverName]){
-document.getElementById("blazull-month").innerText = data[driverName].month;
-document.getElementById("blazull-total").innerText = data[driverName].total;
-}
-})
-.catch(error => console.log("VOX data error:", error));
-
-});
 fetch("drivers.json")
 .then(response => response.json())
 .then(drivers => {
