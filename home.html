@@ -534,7 +534,7 @@ Seznam řidičů firmy Vulcan Ox Logistics.
 
 <h2 id="driver-name">BLAZULL</h2>
 
-<img src="Scania-S.png" style="width:100%;margin-bottom:20px;border:1px solid #ff6600;">
+<img id="driver-truck" src="Bull.png" style="width:100%;margin-bottom:20px;border:1px solid #ff6600;">
 
 <div class="driver-info">
 
@@ -686,6 +686,11 @@ let panel = document.getElementById("vox-driver");
 let overlay = document.getElementById("vox-overlay");
 document.getElementById("driver-name").innerText = window.currentDriver.name;
 document.getElementById("driver-role").innerText = window.currentDriver.role;
+if(window.currentDriver.truck){
+document.getElementById("driver-truck").src = "./" + window.currentDriver.truck;
+}else{
+document.getElementById("driver-truck").src = "./Bull.png";
+}    
 fetch("vox-km.json")
 .then(response => response.json())
 .then(data => {
