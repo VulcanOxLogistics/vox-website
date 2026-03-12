@@ -730,7 +730,7 @@ overlay.style.display = "none";
 
 let panel = document.getElementById("vox-driver");
 let overlay = document.getElementById("vox-overlay");
-
+document.getElementById("driver-name").innerText = window.currentDriver.name;
 overlay.style.display = "block";
 panel.style.display = "block";
 
@@ -738,7 +738,7 @@ setTimeout(function(){
 panel.style.opacity = "1";
 panel.style.transform = "translate(-50%, -50%) scale(1)";
 },10);
-document.getElementById("driver-name").innerText = window.currentDriver.name;
+
 }
 
 function closeDriver(){
