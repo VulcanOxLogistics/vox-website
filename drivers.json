@@ -1,11 +1,15 @@
 [
+[
   {
-    "name": "Blazull"
+    "name": "Blazull",
+    "role": "Vulcan (Founder)"
   },
   {
-    "name": "Petulman"
+    "name": "Petulman",
+    "role": "Ox Prime"
   },
   {
-  "name": "testdriver"
+    "name": "testdriver",
+    "role": "Driver"
   }
 ]
