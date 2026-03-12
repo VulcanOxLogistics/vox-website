@@ -524,7 +524,7 @@ Seznam řidičů firmy Vulcan Ox Logistics.
 
 <div class="vox-close" onclick="closeDriver()">✕</div>
 
-<h2>BLAZULL</h2>
+<h2 id="driver-name">BLAZULL</h2>
 
 <img src="Scania-S.png" style="width:100%;margin-bottom:20px;border:1px solid #ff6600;">
 
@@ -738,7 +738,7 @@ setTimeout(function(){
 panel.style.opacity = "1";
 panel.style.transform = "translate(-50%, -50%) scale(1)";
 },10);
-
+document.getElementById("driver-name").innerText = window.currentDriver.name;
 }
 
 function closeDriver(){
