@@ -792,13 +792,11 @@ fetch("vox-km.json")
 .then(response => response.json())
 .then(data => {
 
-if(data.Blazull){
-document.getElementById("blazull-month").innerText = data.Blazull.month;
-document.getElementById("blazull-total").innerText = data.Blazull.total;
-}
-if(data.Petulman){
-document.getElementById("petulman-month").innerText = data.Petulman.month;
-document.getElementById("petulman-total").innerText = data.Petulman.total;
+let driverName = window.currentDriver.name;
+
+if(data[driverName]){
+document.getElementById("blazull-month").innerText = data[driverName].month;
+document.getElementById("blazull-total").innerText = data[driverName].total;
 }
 })
 .catch(error => console.log("VOX data error:", error));
