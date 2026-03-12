@@ -2,21 +2,32 @@
 {
 "name": "Blazull",
 "role": "Vulcan (Founder)",
+"truck": "Scania-S.png",
+"avatar": "",
 "badges": ["Aurora odznak.png","Odznak-NIGHTFALL.png"]
 },
+
 {
 "name": "Petulman",
 "role": "Ox Prime",
+"truck": "",
+"avatar": "",
 "badges": ["Aurora odznak.png","Odznak-NIGHTFALL.png"]
 },
+
 {
 "name": "Stalky86cz",
 "role": "Route Chief",
+"truck": "",
+"avatar": "",
 "badges": ["Aurora odznak.png","Odznak-NIGHTFALL.png"]
 },
+
 {
-"name": "Bastmen",
+"name": "Eastmen",
 "role": "VOX Driver",
+"truck": "",
+"avatar": "",
 "badges": []
-}  
+}
 ]
