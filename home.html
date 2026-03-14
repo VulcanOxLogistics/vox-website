@@ -634,11 +634,14 @@ document.getElementById("driver-truck").src = "./" + window.currentDriver.truck;
 }else{
 document.getElementById("driver-truck").src = "./Bull.png";
 }
+let avatar = document.getElementById("driver-avatar");
+
 if(window.currentDriver.avatar){
-document.getElementById("driver-avatar").src = "./" + window.currentDriver.avatar;
+avatar.src = "./" + window.currentDriver.avatar;
+avatar.style.display = "block";
 }else{
-document.getElementById("driver-avatar").style.display = "none";
-}    
+avatar.style.display = "none";
+}   
 fetch("vox-km.json?v=" + Date.now())
 .then(response => response.json())
 .then(data => {
