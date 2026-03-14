@@ -385,7 +385,7 @@ text-shadow:0 0 10px #ff6600;
 
 <body>
 <div id="vox-overlay" class="vox-overlay" onclick="closeVox()"></div> 
-<div id="vox-content" class="vox-content">
+<div id="vox-about" class="vox-content">
 <div class="vox-close" onclick="closeVox()">✕</div>
 
 <h2>KDO JSME (DNA VOX)</h2>
@@ -539,7 +539,7 @@ NAŠE FLOTILA
 
 function openVox(){
 
-let panel = document.getElementById("vox-content");
+let panel = document.getElementById("vox-about");
 let overlay = document.getElementById("vox-overlay");
 
 overlay.style.display = "block";
@@ -553,7 +553,7 @@ panel.style.transform = "translate(-50%, -50%) scale(1)";
 }
 function closeVox(){
 
-let panel = document.getElementById("vox-content");
+let panel = document.getElementById("vox-about");
 let overlay = document.getElementById("vox-overlay");
 
 panel.style.opacity = "0";
