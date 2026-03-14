@@ -2,17 +2,17 @@
 {
 "name": "Blazull",
 "role": "Vulcan (Founder)",
-"truck": "Scania-S.png",
-"avatar": "Blazullfoto.png",
-"badges": ["Aurora odznak.png","Odznak-NIGHTFALL.png"]
+"truck": "trucks/Scania-S.png",
+"avatar": "avatars/Blazullfoto.png",
+"badges": ["badges/Aurora odznak.png","badges/Odznak-NIGHTFALL.png"]
 },
 
 {
 "name": "Petulman",
 "role": "Ox Prime",
-"truck": "Scania-S.png",
-"avatar": "Petulmanfoto.png",
-"badges": ["Aurora odznak.png","Odznak-NIGHTFALL.png"]
+"truck": "trucks/Scania-S.png",
+"avatar": "avatars/Petulmanfoto.png",
+"badges": ["badges/Aurora odznak.png","badges/Odznak-NIGHTFALL.png"]
 },
 
 {
@@ -20,7 +20,7 @@
 "role": "Route Chief",
 "truck": "",
 "avatar": "",
-"badges": ["Aurora odznak.png","Odznak-NIGHTFALL.png"]
+"badges": ["badges/Aurora odznak.png","badges/Odznak-NIGHTFALL.png"]
 },
   
 {
@@ -28,7 +28,7 @@
 "role": "VOX Driver",
 "truck": "",
 "avatar": "",
-"badges": ["Aurora odznak.png"]
+"badges": ["badges/Aurora odznak.png"]
 },
   
 {
@@ -50,9 +50,9 @@
 {
 "name": "Milhousek",
 "role": "Ox Prime",
-"truck": "Milhousektruck.png",
+"truck": "trucks/Milhousektruck.png",
 "avatar": "",
-"badges": ["Odznak-NIGHTFALL.png"]
+"badges": ["badges/Odznak-NIGHTFALL.png"]
 },
   
 {
@@ -76,7 +76,7 @@
 "role": "VOX Driver",
 "truck": "",
 "avatar": "",
-"badges": ["Aurora odznak.png","Odznak-NIGHTFALL.png"]
+"badges": ["badges/Aurora odznak.png","badges/Odznak-NIGHTFALL.png"]
 },
   
 {
@@ -108,7 +108,7 @@
 "role": "VOX Driver",
 "truck": "",
 "avatar": "",
-"badges": ["Aurora odznak.png"]
+"badges": ["badges/Aurora odznak.png"]
 },
   
 {
@@ -124,7 +124,7 @@
 "role": "New Ox",
 "truck": "",
 "avatar": "",
-"badges": ["Aurora odznak.png"]
+"badges": ["badges/Aurora odznak.png"]
 },
   
 {
