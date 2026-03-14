@@ -710,7 +710,7 @@ overlay.style.display = "none";
 </script>
 <script>
 
-fetch("drivers.json")
+fetch("drivers.json?v=" + Date.now())
 .then(response => response.json())
 .then(drivers => {
 
