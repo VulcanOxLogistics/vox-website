@@ -629,6 +629,7 @@ let panel = document.getElementById("vox-driver");
 let overlay = document.getElementById("vox-overlay");
 document.getElementById("driver-name").innerText = window.currentDriver.name;
 document.getElementById("driver-role").innerText = window.currentDriver.role;
+document.getElementById("driver-total").innerText = "načítám...";    
 if(window.currentDriver.truck){
 document.getElementById("driver-truck").src = "./" + window.currentDriver.truck;
 }else{
@@ -717,12 +718,26 @@ fetch("drivers.json?v=" + Date.now())
 const fleet = document.getElementById("fleet-list");
 
 drivers.forEach(driver => {
-let item = document.createElement("p");
-item.style.marginTop = "20px";
-item.style.fontSize = "20px";
-item.style.color = "#ff7a2a";
+
+let item = document.createElement("div");
+
+item.style.marginTop = "18px";
 item.style.cursor = "pointer";
-item.innerText = driver.name;
+
+let name = document.createElement("div");
+name.innerText = driver.name;
+name.style.fontSize = "20px";
+name.style.color = "#ff7a2a";
+
+let role = document.createElement("div");
+role.innerText = driver.role;
+role.style.fontSize = "13px";
+role.style.color = "#aaaaaa";
+role.style.marginTop = "2px";
+
+item.appendChild(name);
+item.appendChild(role);
+
 item.onclick = function(){
 window.currentDriver = driver;
 openDriver();
