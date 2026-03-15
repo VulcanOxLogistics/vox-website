@@ -10,7 +10,7 @@
 {
 "name": "Petulman",
 "role": "Ox Prime",
-"truck": "trucks/Scania-S.png",
+"truck": "trucks/Petulmantruck.png",
 "avatar": "avatars/Petulmanfoto.png",
 "badges": ["badges/Aurora odznak.png","badges/Odznak-NIGHTFALL.png"]
 },
