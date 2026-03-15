@@ -18,8 +18,8 @@
 {
 "name": "Stalky86cz",
 "role": "Route Chief",
-"truck": "trucks/Bull.png",
-"avatar": "",
+"truck": "trucks/Stalkytruck.jpg",
+"avatar": "Stalkyfoto.png",
 "badges": ["badges/Aurora odznak.png","badges/Odznak-NIGHTFALL.png"]
 },
   
@@ -98,8 +98,8 @@
 {
 "name": "michalpodzem",
 "role": "VOX Driver",
-"truck": "trucks/Bull.png",
-"avatar": "",
+"truck": "trucks/Davidhastruck.png",
+"avatar": "Davidhasfoto.png",
 "badges": []
 },
   
