@@ -117,21 +117,24 @@ transform:translateY(-2px);
 .road-button{
 position:absolute;
 padding:12px 26px;
-color:#ffb347;
-/* tmavý kámen */
+/* TEXT */
+color:#ffcc66;
+text-shadow:
+0 0 8px rgba(255,140,0,0.9),
+0 0 16px rgba(255,80,0,0.6);
+/* POZADÍ (kámen) */
 background:rgba(25,25,25,0.85);
 border-radius:4px;
-/* žhavý okraj */
 border:1px solid rgba(255,120,0,0.4);
-/* zapuštění + hloubka */
+/* EFEKT */
 box-shadow:
 0 6px 20px rgba(0,0,0,0.9),
 inset 0 0 12px rgba(255,80,0,0.35),
 0 0 10px rgba(255,120,0,0.4);
-/* jemný náklon (NE přehnaný) */
+/* LEHKÉ ODDĚLENÍ OD SILNICE */
+backdrop-filter:blur(2px);
+/* PERSPEKTIVA */
 transform:translateX(-50%) perspective(600px) rotateX(8deg);
-/* jemný glow textu */
-text-shadow:0 0 6px rgba(255,120,0,0.6);
 transition:0.3s;
 }
 
