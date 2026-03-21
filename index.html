@@ -116,12 +116,12 @@ transform:translateY(-2px);
 
 .road-button{
 position:absolute;
-padding:12px 26px;
+padding:14px 32px;
 /* TEXT */
 color:#ffcc66;
 text-shadow:
-0 0 8px rgba(255,140,0,0.9),
-0 0 16px rgba(255,80,0,0.6);
+0 0 10px rgba(255,140,0,1),
+0 0 20px rgba(255,80,0,0.9);
 /* POZADÍ (kámen) */
 background:rgba(25,25,25,0.85);
 border-radius:4px;
@@ -131,13 +131,24 @@ box-shadow:
 0 6px 20px rgba(0,0,0,0.9),
 inset 0 0 12px rgba(255,80,0,0.35),
 0 0 10px rgba(255,120,0,0.4);
+0 8px 25px rgba(255,80,0,0.25);    
 /* LEHKÉ ODDĚLENÍ OD SILNICE */
 backdrop-filter:blur(2px);
 /* PERSPEKTIVA */
 transform:translateX(-50%) perspective(600px) rotateX(8deg);
 transition:0.3s;
+animation:lavaGlow 2.5s infinite alternate;    
 }
 
+@keyframes lavaGlow{
+0%{
+filter:brightness(0.95);
+}
+100%{
+filter:brightness(1.15);
+}
+}
+    
 .road-button:hover{
 color:#fff;
 border-color:#ff6600;
@@ -240,13 +251,9 @@ opacity:0;
 }
 
 @keyframes lavaFlash{
-
 0%{ filter:brightness(1); }
-
 50%{ filter:brightness(1.35); }
-
 100%{ filter:brightness(1); }
-
 }
 
 .lava-flash{
@@ -333,19 +340,13 @@ Přidej se k VOX
 const sparks = document.querySelector(".sparks");
 
 for(let i=0;i<70;i++){
-
 let spark = document.createElement("span");
-
 spark.style.left = Math.random()*100 + "vw";
-
 spark.style.setProperty("--size", (3 + Math.random()*5) + "px");
 spark.style.setProperty("--duration", (3 + Math.random()*5) + "s");
 spark.style.setProperty("--drift", (Math.random()*80 - 40) + "px");
-
 spark.style.opacity = 0.4 + Math.random()*0.6;
-
 sparks.appendChild(spark);
-
 }
 const flash = document.querySelector(".flash-overlay");
 
