@@ -130,7 +130,7 @@ border:1px solid rgba(255,120,0,0.4);
 box-shadow:
 0 6px 20px rgba(0,0,0,0.9),
 inset 0 0 12px rgba(255,80,0,0.35),
-0 0 10px rgba(255,120,0,0.4);
+0 0 10px rgba(255,120,0,0.4),
 0 8px 25px rgba(255,80,0,0.25);    
 /* LEHKÉ ODDĚLENÍ OD SILNICE */
 backdrop-filter:blur(2px);
@@ -161,33 +161,18 @@ transform:translateX(-50%) perspective(600px) rotateX(8deg) scale(1.05);
 .discord{
 bottom:120px;
 left:50%;
-transform:rotate(-50%);
 }
 
 .vstupte{
 bottom:200px;
 left:50%;
-transform:rotate(-50%);
 }
-
+    
 .join{
 bottom:280px;
 left:50%;
-transform:rotate(-50%);
 }    
     
-@keyframes lavaPulse{
-0%{
-filter:brightness(0.92);
-}
-50%{
-filter:brightness(1.15);
-}
-100%{
-filter:brightness(0.92);
-}
-}
-
 body::before{
 content:"";
 position:fixed;
