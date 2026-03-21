@@ -116,28 +116,32 @@ transform:translateY(-2px);
 
 .road-button{
 position:absolute;
-background:rgba(20,20,20,0.55);
-color:#ffcc66;
-padding:14px 28px;
-border-radius:6px;
+padding:12px 26px;
+color:#ffb347;
+/* tmavý kámen */
+background:rgba(18,18,18,0.7);
+border-radius:4px;
+/* žhavý okraj */
 border:1px solid rgba(255,120,0,0.4);
-/* HLAVNÍ KOUZLO */
+/* zapuštění + hloubka */
 box-shadow:
-0 4px 15px rgba(0,0,0,0.9),
-inset 0 0 10px rgba(255,80,0,0.2);
-/* lehké „zapadnutí do silnice“ */
-transform:translateX(-50%) perspective(500px) rotateX(25deg);
+0 6px 20px rgba(0,0,0,0.9),
+inset 0 0 8px rgba(255,80,0,0.2);
+/* jemný náklon (NE přehnaný) */
+transform:translateX(-50%) perspective(600px) rotateX(8deg);
+/* jemný glow textu */
+text-shadow:0 0 6px rgba(255,120,0,0.6);
 transition:0.3s;
 }
 
 .road-button:hover{
 color:#fff;
+border-color:#ff6600;
 box-shadow:
-0 0 12px #ff6a00,
-0 0 25px #ff3c00,
-inset 0 2px 8px rgba(255,160,0,0.6);
-transform:scale(1.05);
-}    
+0 0 12px #ff6600,
+0 0 30px rgba(255,80,0,0.6);
+transform:translateX(-50%) perspective(600px) rotateX(8deg) scale(1.05);
+}   
 
 .discord{
 bottom:120px;
