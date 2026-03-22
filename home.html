@@ -742,17 +742,12 @@ panel.style.transform = "translate(-50%, -50%) scale(1)";
 function closeDriver(){
 
 let panel = document.getElementById("vox-driver");
-let overlay = document.getElementById("vox-overlay");
 
 panel.style.opacity = "0";
 panel.style.transform = "translate(-50%, -50%) scale(0.9)";
 
-overlay.style.opacity = "0";
-overlay.style.pointerEvents = "none";
-
 setTimeout(function(){
 panel.style.display = "none";
-overlay.style.display = "none";
 },300);
 
 }
