@@ -6,7 +6,42 @@
 <title>Vulcan Ox Logistics</title>
 
 <style>
+.vox-values{
+  position:absolute;
+  top:40%;
+  left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+}
 
+/* LEVÁ STRANA */
+.vox-left{
+  position:absolute;
+  top:35%;
+  left:60px;
+  max-width:260px;
+  text-align:left;
+}
+
+/* PRAVÁ STRANA */
+.vox-right{
+  position:absolute;
+  top:35%;
+  right:60px;
+  max-width:260px;
+  text-align:right;
+}
+
+/* SPODNÍ */
+.vox-bottom{
+  position:absolute;
+  bottom:80px;
+  left:50%;
+  transform:translateX(-50%);
+  max-width:400px;
+  text-align:center;
+}
 body{
 
 margin:0;
@@ -420,6 +455,7 @@ transition:0.2s;
   color: #ccc;
   font-size: 15px;
   line-height: 1.6;
+  text-shadow: 0 0 10px rgba(255,100,0,0.3);
 }  
   
 </style>
