@@ -227,8 +227,8 @@ inset 0 0 20px rgba(0,0,0,0.8);
     background: rgba(0,0,0,0.75);
 
     display:none;
-    opacity: 0; /* 🔥 DŮLEŽITÉ */
-    transition: opacity 0.3s ease; /* 🔥 DŮLEŽITÉ */
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
 
     z-index:998;
 }
@@ -413,7 +413,7 @@ transition:0.2s;
 </head>
 
 <body>
-<div id="vox-overlay" class="vox-overlay" onclick="closeVox()"></div> 
+<div id="vox-overlay" class="vox-overlay" onclick="closeAll()"></div> 
 <div id="vox-about" class="vox-content">
 <div class="vox-close" onclick="closeVox()">✕</div>
 
@@ -599,6 +599,7 @@ overlay.style.display = "none";
 },300);
 
 }
+  
 function openSymbol(){
 
 let panel = document.getElementById("vox-symbol");
@@ -608,6 +609,9 @@ overlay.style.display = "block";
 panel.style.display = "block";
 
 setTimeout(function(){
+overlay.style.opacity = "1";          
+overlay.style.pointerEvents = "auto"; 
+
 panel.style.opacity = "1";
 panel.style.transform = "translate(-50%, -50%) scale(1)";
 },10);
@@ -628,6 +632,7 @@ overlay.style.display = "none";
 },300);
 
 }
+  
 function openFlotila(){
 
 let panel = document.getElementById("vox-flotila");
@@ -637,6 +642,9 @@ overlay.style.display = "block";
 panel.style.display = "block";
 
 setTimeout(function(){
+overlay.style.opacity = "1";          
+overlay.style.pointerEvents = "auto"; 
+
 panel.style.opacity = "1";
 panel.style.transform = "translate(-50%, -50%) scale(1)";
 },10);
@@ -722,9 +730,12 @@ overlay.style.display = "block";
 panel.style.display = "block";
 
 setTimeout(function(){
+overlay.style.opacity = "1";
+overlay.style.pointerEvents = "auto";   
 panel.style.opacity = "1";
 panel.style.transform = "translate(-50%, -50%) scale(1)";
 },10);
+   
 
 }
 
@@ -736,11 +747,38 @@ let overlay = document.getElementById("vox-overlay");
 panel.style.opacity = "0";
 panel.style.transform = "translate(-50%, -50%) scale(0.9)";
 
+overlay.style.opacity = "0";
+overlay.style.pointerEvents = "none";
+
 setTimeout(function(){
 panel.style.display = "none";
+overlay.style.display = "none";
 },300);
-}
 
+}
+  
+function closeAll(){
+
+let overlay = document.getElementById("vox-overlay");
+let panels = document.querySelectorAll(".vox-content");
+
+panels.forEach(panel=>{
+panel.style.opacity = "0";
+panel.style.transform = "translate(-50%, -50%) scale(0.9)";
+});
+
+overlay.style.opacity = "0";
+overlay.style.pointerEvents = "none";
+
+setTimeout(()=>{
+panels.forEach(panel=>{
+panel.style.display = "none";
+});
+overlay.style.display = "none";
+},300);
+
+}
+  
 </script>
 <script>
 
