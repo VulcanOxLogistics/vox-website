@@ -7,48 +7,56 @@
 
 <style>
 .vox-values{
-  position:relative;
+  position:absolute;
+  top:0;
+  left:0;
   width:100%;
-  min-height:100vh;
+  height:100%;
   pointer-events:none;
   z-index:1;
 }
 
+/* STABILITA */
 .vox-left{
   position:absolute;
-  top:35%;
-  left:6%;
+  top:42%;
+  left:12%;
   max-width:260px;
   text-align:left;
 }
 
+/* SÍLA */
 .vox-right{
   position:absolute;
-  top:35%;
-  right:6%;
+  top:42%;
+  right:20%;
   max-width:260px;
   text-align:right;
 }
 
+/* RESPEKT */
 .vox-bottom{
   position:absolute;
-  bottom:80px;
-  top:auto;
+  bottom:140px;
   left:50%;
-  transform:translate(-50%);
-  max-width:320px;
+  transform:translateX(-50%);
+  max-width:400px;
   text-align:center;
 }
 body{
-  margin:0;
-  font-family:Arial, sans-serif;
-  color:white;
-  min-height:100vh;
 
-  background-image: url("bullweb.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat:no-repeat;
+margin:0;
+font-family:Arial, sans-serif;
+color:white;
+
+background-image:
+url("bullweb.png"),
+url("homeback1.png");
+background-size:900px, cover;
+background-position:center 260px, center;
+background-repeat:no-repeat, no-repeat;
+background-attachment:fixed;
+
 }
   
 
@@ -96,12 +104,10 @@ text-shadow:0 0 10px #ff6600;
 /* obsah */
 
 .content{
-  position:absolute;
-  top:25%;
-  left:50%;
-  transform:translateX(-50%);
-  text-align:center;
-  z-index:2;
+margin-top:140px;
+text-align:center;
+position:relative;
+z-index:2;
 }
 .content h1{
 color:#ff6600;
@@ -127,8 +133,8 @@ text-shadow:
 /* pravý panel */
 .vox-menu {
 position: fixed;
-right: 3%;
-top: 25%;
+right: 70px;
+top: 200px;
 width:200px;
 display:flex;
 flex-direction:column;
@@ -476,27 +482,7 @@ text-shadow:0 0 8px rgba(0,0,0,0.8);
   box-shadow:
   0 0 40px rgba(255,100,0,0.6),
   inset 0 0 30px rgba(255,80,0,0.3);
-}
-  
- @media (max-width: 1600px){
-  .vox-menu{
-    right: 2%;
-    top: 22%;
-  }
-
-}
-
-@media (max-height: 900px){
-  .vox-menu{
-    top:22%;
-  }
-
-  .vox-bottom{
-    top:82%;
-  }
 }  
-
-
   
 </style>
 
@@ -647,7 +633,7 @@ NAŠE FLOTILA
 </div>
 
 </div>
-<div class="vox-values">
+ <div class="vox-values">
 
   <div class="vox-left">
     <h3>STABILITA</h3>
@@ -674,17 +660,16 @@ NAŠE FLOTILA
       Získáš ho cestou, kterou projedeš.<br>
       A tím, že nikdy nezastavíš.
     </p>
-  </div>
-  
+  </div>  
+<div class="content">
+
+<h1>VULCAN OX LOGISTICS</h1>
+<p>klid v pohybu</p>
 
 </div>
 
-  <div class="content">
-    <h1>VULCAN OX LOGISTICS</h1>
-    <p>klid v pohybu</p>
-  </div>
 
-</div>
+</div> 
 <script>
 
 
