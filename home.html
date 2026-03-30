@@ -50,15 +50,12 @@ font-family:Arial, sans-serif;
 color:white;
 
 background-image:
-url("bullweb1.png"),
 url("homeback1.png");
-background-size:900px, cover;
-background-position:center 260px, center;
-background-repeat:no-repeat, no-repeat;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 background-attachment:fixed;
-filter:
-drop-shadow(0 0 20px rgba(255,100,0,0.4))
-drop-shadow(0 0 40px rgba(255,80,0,0.2));
+
 }
   
 
@@ -484,7 +481,28 @@ text-shadow:0 0 8px rgba(0,0,0,0.8);
   box-shadow:
   0 0 40px rgba(255,100,0,0.6),
   inset 0 0 30px rgba(255,80,0,0.3);
-}  
+} 
+
+ body::before{
+ content:"";
+ position:fixed;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+
+ background-image:url("bullweb1.png");
+ background-size:900px;
+ background-position:center 260px;
+ background-repeat:no-repeat;
+
+ pointer-events:none;
+
+ filter: drop-shadow(0 0 20px rgba(255,100,0,0.4))
+         drop-shadow(0 0 40px rgba(255,80,0,0.2));
+
+ z-index:0;
+} 
   
 </style>
 
